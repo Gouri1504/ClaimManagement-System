@@ -1,0 +1,23 @@
+meta {
+  name: get claim using id
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/claims/67d40666c43e3284d08d31dd
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDQwNThmYzQzZTMyODRkMDhkMzFkNyIsInJvbGUiOiJwYXRpZW50IiwiZW1haWwiOiJwYXRpZW50QGV4YW1wbGUuY29tIiwiaWF0IjoxNzQxOTU2MTE4LCJleHAiOjE3NDE5NTk3MTh9.3K1wDc252QAPw1xwiTwKgxfRnJu0DF-f1ZiJ2BqqWs0
+}
+
+body:json {
+  {
+    "email": "patient@example.com",
+    "password": "123456"
+  }
+  
+}

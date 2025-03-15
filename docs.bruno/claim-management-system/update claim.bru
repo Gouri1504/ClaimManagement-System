@@ -1,0 +1,24 @@
+meta {
+  name: update claim
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{url}}/claims/67d40666c43e3284d08d31dd
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDQwNThmYzQzZTMyODRkMDhkMzFkNyIsInJvbGUiOiJwYXRpZW50IiwiaWF0IjoxNzQxOTQ4MzQ1LCJleHAiOjE3NDE5NTE5NDV9.twsmYJ7gfr6GELPtFxTqgFYkS3a1Ka2-3HJWPr3-rUc
+}
+
+body:json {
+  {
+    "status": "Approved",
+    "insurerComments": "Claim approved, payout scheduled.",
+    "approvedAmount": 4500
+  }
+  
+}

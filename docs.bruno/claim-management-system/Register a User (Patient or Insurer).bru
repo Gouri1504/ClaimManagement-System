@@ -1,0 +1,20 @@
+meta {
+  name: Register a User (Patient or Insurer)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "insurer@example.com",
+    "password": "123456",
+    "role": "insurer"
+  }
+  
+}

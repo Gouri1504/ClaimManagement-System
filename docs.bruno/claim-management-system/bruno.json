@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "claim-management-system",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

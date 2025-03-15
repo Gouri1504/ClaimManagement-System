@@ -1,0 +1,24 @@
+meta {
+  name: Post claim
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/claims
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDQwNThmYzQzZTMyODRkMDhkMzFkNyIsInJvbGUiOiJwYXRpZW50IiwiZW1haWwiOiJwYXRpZW50QGV4YW1wbGUuY29tIiwiaWF0IjoxNzQxOTU2MTE4LCJleHAiOjE3NDE5NTk3MTh9.3K1wDc252QAPw1xwiTwKgxfRnJu0DF-f1ZiJ2BqqWs0
+}
+
+body:multipart-form {
+  name: John Doe
+  email: patient@example.com
+  claimAmount: 1000
+  description: Claim for medical expenses
+  status: Pending
+  file: @file(/Users/amanagrawal/Downloads/_certificate_aman1055-be23-chitkarauniversity-edu-in_479090f6-affe-4174-8634-db4a337a4b04.pdf)
+}
