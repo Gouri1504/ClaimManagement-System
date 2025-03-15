@@ -1,0 +1,22 @@
+import { Document } from 'mongoose';
+export type ClaimDocument = Claim & Document;
+export declare class Claim {
+    name: string;
+    email: string;
+    claimAmount: number;
+    description: string;
+    status: 'Pending' | 'Approved' | 'Rejected';
+    submissionDate: Date;
+    approvedAmount?: number;
+    insurerComments?: string;
+    documentUrl?: string;
+}
+export declare const ClaimSchema: import("mongoose").Schema<Claim, import("mongoose").Model<Claim, any, any, any, Document<unknown, any, Claim> & Claim & {
+    _id: import("mongoose").Types.ObjectId;
+} & {
+    __v: number;
+}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Claim, Document<unknown, {}, import("mongoose").FlatRecord<Claim>> & import("mongoose").FlatRecord<Claim> & {
+    _id: import("mongoose").Types.ObjectId;
+} & {
+    __v: number;
+}>;
