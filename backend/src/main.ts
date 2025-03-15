@@ -20,6 +20,7 @@ async function bootstrap() {
   // Serve uploaded files statically
   app.use('/uploads', express.static(join(__dirname, '..', 'uploads')));
 
-  await app.listen(3001);
+  const port = process.env.PORT || 3000;
+  await app.listen(port, '0.0.0.0');
 }
 bootstrap();
